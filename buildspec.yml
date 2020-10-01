@@ -5,8 +5,6 @@ env:
      username: arn:aws:secretsmanager:us-east-1:156380389105:secret:kavitha4-fY4t3h:user1
      password: arn:aws:secretsmanager:us-east-1:156380389105:secret:kavitha4-fY4t3h:user2
 phases:
-  runtime-versions:
-    nodejs: 10
   install:
     commands:
       - wget https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
