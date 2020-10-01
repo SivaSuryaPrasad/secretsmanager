@@ -5,56 +5,20 @@ env:
      username: arn:aws:secretsmanager:us-east-1:156380389105:secret:kavitha4-fY4t3h:user1
      password: arn:aws:secretsmanager:us-east-1:156380389105:secret:kavitha4-fY4t3h:user2
 phases:
-  #install:
-    #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
-    #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
-    runtime-versions:
-        nodejs: 10
-    #runtime-versions:
-      # name: version
-      # name: version
+  runtime-versions:
+    nodejs: 10
+  commands:
+    - wget https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
+    - install python-3.8.5.exe
+    - sudo pip install boto3
+    - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
+    - unzip terraform_0.10.4_linux_amd64.zip
+    - sudo mv terraform /bin
+    - rm terraform_0.10.4_linux_amd64.zip
+    - apt-get update
+    - terraform init 
+    - terraform apply
+  build:
     commands:
-    #   - wget https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
-    #   - install python-3.8.5.exe
-      - sudo pip install boto3
-      - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
-      - unzip terraform_0.10.4_linux_amd64.zip
-      - sudo mv terraform /bin
-      - rm terraform_0.10.4_linux_amd64.zip
-      - apt-get update
-      - terraform init 
-      - terraform apply
-      # - command
-      # - command
-    # pre_build:
-    #commands:
-      # - command
-      # - command
-    build:
-       commands:
-        - echo "$username"
-        - echo "$password" 
-      # - command
-      # - command
-  #post_build:
-    #commands:
-      # - command
-      # - command
-#reports:
-  #report-name-or-arn:
-    #files:
-      # - location
-      # - location
-    #base-directory: location
-    #discard-paths: yes
-    #file-format: JunitXml | CucumberJson
-#artifacts:
-  #files:
-    # - location
-    # - location
-  #name: $(date +%Y-%m-%d)
-  #discard-paths: yes
-  #base-directory: location
-#cache:
-  #paths:
-    # - paths
+      - echo "$username"
+      - echo "$password" 
