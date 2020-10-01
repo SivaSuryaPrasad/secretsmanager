@@ -7,10 +7,10 @@ env:
 phases:
   install:
     commands:
-      - wget https://www.python.org/ftp/python/3.8.6/python-3.8.6
+      - wget https://www.python.org/ftp/python/3.8.6/python-3.8.6.exe
       - echo installing python 3.8.6
       - apt-get update
-      - apt-get install python-3.8.6.exe
+      - apt-get install python-3.8.6
       - sudo pip install boto3
       - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
       - unzip terraform_0.10.4_linux_amd64.zip
