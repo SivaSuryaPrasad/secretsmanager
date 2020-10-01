@@ -7,17 +7,18 @@ env:
 phases:
   runtime-versions:
     nodejs: 10
-  commands:
-    - wget https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
-#     - install python-3.8.5.exe
-#     - sudo pip install boto3
-#     - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
-#     - unzip terraform_0.10.4_linux_amd64.zip
-#     - sudo mv terraform /bin
-#     - rm terraform_0.10.4_linux_amd64.zip
-#     - apt-get update
-#     - terraform init 
-#     - terraform apply
+  install:
+    commands:
+      - wget https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
+      - install python-3.8.5.exe
+      - sudo pip install boto3
+      - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
+      - unzip terraform_0.10.4_linux_amd64.zip
+      - sudo mv terraform /bin
+      - rm terraform_0.10.4_linux_amd64.zip
+      - apt-get update
+      - terraform init 
+      - terraform apply
   build:
     commands:
       - echo "$username"
