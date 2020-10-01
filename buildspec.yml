@@ -17,9 +17,16 @@ phases:
       - sudo mv terraform /bin
       - rm terraform_0.10.4_linux_amd64.zip
       - apt-get update
-      - terraform init 
-      - terraform apply
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
   build:
     commands:
+      - terraform init 
+      - terraform apply
       - echo "$username"
       - echo "$password" 
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
