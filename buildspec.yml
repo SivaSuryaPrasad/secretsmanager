@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   secrets-manager:
-     username: arn:aws:secretsmanager:us-east-1:736097574176:secret:kavitha4-Lutky8:user1
-     password: arn:aws:secretsmanager:us-east-1:736097574176:secret:kavitha4-Lutky8:user2
+     username: jsondecode(arn:aws:secretsmanager:us-east-1:736097574176:secret:kavitha4-Lutky8)["user1"]
+     password: jsondecode(arn:aws:secretsmanager:us-east-1:736097574176:secret:kavitha4-Lutky8)["user2"]
 phases:
   install:
     commands:
