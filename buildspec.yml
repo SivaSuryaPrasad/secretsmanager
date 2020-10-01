@@ -7,24 +7,24 @@ env:
 phases:
   install:
     commands:
-      - wget https://www.python.org/ftp/python/3.8.6/python-3.8.6.exe
-      - apt-get update
+#       - wget https://www.python.org/ftp/python/3.8.6/python-3.8.6.exe
+#       - apt-get update
       - echo installing python 3.8.6
-      - apt-cache search python
-      - apt install python-3.8.6
-      - sudo pip install boto3
-      - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
-      - unzip terraform_0.10.4_linux_amd64.zip
-      - sudo mv terraform /bin
-      - rm terraform_0.10.4_linux_amd64.zip
-      - apt-get update
+#       - apt-cache search python
+#       - apt install python-3.8.6
+#       - sudo pip install boto3
+#       - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
+#       - unzip terraform_0.10.4_linux_amd64.zip
+#       - sudo mv terraform /bin
+#       - rm terraform_0.10.4_linux_amd64.zip
+#       - apt-get update
   pre_build:
     commands:
       - echo Entered the pre_build phase...
   build:
     commands:
-      - terraform init 
-      - terraform apply
+#       - terraform init 
+#       - terraform apply
       - echo "$username"
       - echo "$password" 
   post_build:
