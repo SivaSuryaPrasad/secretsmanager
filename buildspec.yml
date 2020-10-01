@@ -4,9 +4,9 @@ env:
 #   secrets-manager:
 #      username: arn:aws:secretsmanager:us-east-1:736097574176:secret:kavitha4-Lutky8:user1
 #      password: arn:aws:secretsmanager:us-east-1:736097574176:secret:kavitha4-Lutky8:user2
-parameter-store:
-    username: /aws/reference/secretsmanager/kavitha4-Lutky8
-    password: /aws/reference/secretsmanager/kavitha4-Lutky8
+    parameter-store:
+       username: /aws/reference/secretsmanager/kavitha4-Lutky8
+       password: /aws/reference/secretsmanager/kavitha4-Lutky8
 phases:
   install:
     commands:
