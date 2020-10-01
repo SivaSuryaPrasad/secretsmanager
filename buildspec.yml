@@ -7,8 +7,11 @@ env:
 phases:
   install:
     commands:
-      - wget https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
-      - sudo apt install python-3.8.5
+      - wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
+      - tar –xf Python-3.8.3.tgz
+      - cd python-3.8.3
+      - ./configure ––enable–optimizations
+      - sudo make altinstall
       - sudo pip install boto3
       - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
       - unzip terraform_0.10.4_linux_amd64.zip
