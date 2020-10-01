@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - wget https://www.python.org/ftp/python/3.8.6/python-3.8.6.exe
+      - wget https://www.python.org/ftp/python/3.8.6/python-3.8.6
       - echo installing python 3.8.6
       - apt-get update
       - apt-get install python-3.8.6.exe
